@@ -1,3 +1,4 @@
+# alx-airbnb-database
 # Database Schema for Airbnb Clone
 
 This repository contains the SQL schema for the Airbnb Clone project.
