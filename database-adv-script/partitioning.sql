@@ -24,3 +24,14 @@ CREATE TABLE Booking2024 PARTITION OF BookingPartitioned
 SELECT *
 FROM BookingPartitioned
 WHERE start_date BETWEEN '2023-01-01' AND '2023-12-31';
+-- Example Query 1: Fetching bookings by user
+EXPLAIN ANALYZE
+SELECT *
+FROM Booking
+WHERE user_id = 1;
+
+-- Example Query 2: Fetching bookings by date
+EXPLAIN ANALYZE
+SELECT *
+FROM Booking
+WHERE start_date BETWEEN '2023-01-01' AND '2023-12-31';
