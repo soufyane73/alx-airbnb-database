@@ -22,8 +22,9 @@ JOIN
 JOIN 
     Payment pay ON b.booking_id = pay.booking_id
 WHERE 
-    pay.payment_date >= '2023-01-01';  -- Example filter for bookings after January 1, 2023
-
+    pay.payment_date >= '2023-01-01'  -- Filter for bookings after January 1, 2023
+    AND u.user_id IS NOT NULL  -- Ensure user ID is valid
+    AND p.property_id IS NOT NULL;  -- Ensure property ID is valid
 
 EXPLAIN SELECT 
     b.booking_id,
