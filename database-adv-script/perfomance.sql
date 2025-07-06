@@ -1,5 +1,7 @@
 -- Initial Query to Retrieve All Bookings with User, Property, and Payment Details
 
+-- Initial Query to Retrieve All Bookings with User, Property, and Payment Details
+
 SELECT 
     b.booking_id,
     b.user_id,
@@ -18,7 +20,9 @@ JOIN
 JOIN 
     Property p ON b.property_id = p.property_id
 JOIN 
-    Payment pay ON b.booking_id = pay.booking_id;
+    Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    pay.payment_date >= '2023-01-01';  -- Example filter for bookings after January 1, 2023
 
 
 EXPLAIN SELECT 
