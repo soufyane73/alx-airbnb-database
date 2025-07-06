@@ -11,3 +11,5 @@ CREATE INDEX idx_booking_property_id ON Booking(property_id);
 CREATE INDEX idx_property_host_id ON Property(host_id);
 
 EXPLAIN SELECT * FROM Booking WHERE user_id = 'some_user_id';
+
+ANALYZE SELECT * FROM Booking WHERE user_id = 'some_user_id';
