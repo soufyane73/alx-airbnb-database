@@ -20,3 +20,15 @@ The following partitions were created for the `Booking` table:
   SELECT *
   FROM Booking
   WHERE start_date BETWEEN '2023-01-01' AND '2023-12-31';
+  # Performance Monitoring and Refinement
+
+## Query Analysis
+
+### Frequently Used Queries
+
+1. **Fetch Bookings by User**
+   ```sql
+   EXPLAIN ANALYZE
+   SELECT *
+   FROM Booking
+   WHERE user_id = 1;
